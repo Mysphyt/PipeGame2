@@ -1,0 +1,10 @@
+C:\Users\Aaron\Desktop\CS Projects\PipeGame\PipeGame\bin\WindowsGL\Debug\Content\pipe1.png
+C:\Users\Aaron\Desktop\CS Projects\PipeGame\PipeGame\bin\WindowsGL\Debug\PipeGame.exe
+C:\Users\Aaron\Desktop\CS Projects\PipeGame\PipeGame\bin\WindowsGL\Debug\PipeGame.pdb
+C:\Users\Aaron\Desktop\CS Projects\PipeGame\PipeGame\bin\WindowsGL\Debug\Lidgren.Network.dll
+C:\Users\Aaron\Desktop\CS Projects\PipeGame\PipeGame\bin\WindowsGL\Debug\MonoGame.Framework.dll
+C:\Users\Aaron\Desktop\CS Projects\PipeGame\PipeGame\bin\WindowsGL\Debug\OpenTK.dll
+C:\Users\Aaron\Desktop\CS Projects\PipeGame\PipeGame\bin\WindowsGL\Debug\Tao.Sdl.dll
+C:\Users\Aaron\Desktop\CS Projects\PipeGame\PipeGame\obj\x86\Debug\PipeGame.csprojResolveAssemblyReference.cache
+C:\Users\Aaron\Desktop\CS Projects\PipeGame\PipeGame\obj\x86\Debug\PipeGame.exe
+C:\Users\Aaron\Desktop\CS Projects\PipeGame\PipeGame\obj\x86\Debug\PipeGame.pdb
