@@ -7,25 +7,32 @@ namespace PipeGame
 {
     class Pipe
     {
-        int type;
-        int[] access = new int[4];
-        int rads;
+        public int type;
+        public int[] access = new int[4];
+        public int rads;
 
-        public int Rads
+        public Pipe(int type)
         {
-            get { return rads; }
-            set { rads = value; }
-        } 
-        public int[] Access
-        {
-            get { return access; }
-            set { access = value; }
+            this.type = type;
+            rads = 0;
+            access = findAccess(type);
         }
-        public int Type
+
+        private int[] findAccess(int type)
         {
-            get { return type; }
-            set { type = value; }
+            if (type == 'x')
+            {
+                return new int[4] { 0, 0, 1, 1 };
+            }
+            else
+            {
+                return new int[4] { 0, 0, 0, 0 }; 
+            }
+
         }
+
+
+
 
     }
 }

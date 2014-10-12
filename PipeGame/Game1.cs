@@ -18,14 +18,19 @@ namespace PipeGame
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Pipe pipe = new Pipe();
+ 
         Readfile posArray = new Readfile();
         int gameR, gameC;
-        const int columns = 10;
-        const int rows = 10;
+        //const int columns = 10;
+        //const int rows = 10;
         int particlePosX;
         int particlePosY;
-        char[,] positionArray = new char[rows, columns];
+        //char[,] positionArray = new char[rows, columns];
+        int[] size = new int[2];
+        int[] start = new int[2];
+        int[] finish = new int[2];
+        char type;
+        Pipe[,] level;
         public Game1()
             : base()
         {
@@ -37,7 +42,7 @@ namespace PipeGame
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            
             base.Initialize();
         }
 
@@ -46,6 +51,25 @@ namespace PipeGame
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+           
+            
+            // TODO: Add your update logic here
+            Pipe pipe;
+            for (gameR = 0; gameR < columns; gameR++)
+            {
+                for (gameC = 0; gameC < rows; gameC++)
+                {
+                    //Find type
+                    type = positionArray[gameR, gameC];
+                    //Define pipe using 'Pipe(type)'
+                    
+                    //Fill Level[,] with the pipe
+                    pipe = new Pipe(type);
+
+                    //Fill the array of pipes
+                    level[gameR, gameC] = pipe;
+                }
+            }
             // TODO: use this.Content to load your game content here
         }
 
@@ -56,22 +80,10 @@ namespace PipeGame
 
         protected override void Update(GameTime gameTime)
         {
+
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-            positionArray = posArray.SetPosArray(rows, columns);
-            // TODO: Add your update logic here
-
-            Pipe pipe;
-            for (gameR = 0; gameR < columns; gameR++)
-            {
-                for (gameC = 0; gameC < rows; gameC++)
-                {
-                    /* Find type
-                     * Define pipe using 'Pipe(type)'
-                     * Fill Level[,] with the pipe
-                    */
-                }
-            }
+            
             for (gameR = 0; gameR < rows; gameR++)
             {
                 for (gameC = 0; gameC < columns; gameC++)
@@ -80,8 +92,7 @@ namespace PipeGame
                 }
                 Console.WriteLine("");
             }
-            // MOVE:
-            // ...
+            
             base.Update(gameTime);
         }
 
